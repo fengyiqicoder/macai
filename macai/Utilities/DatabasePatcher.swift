@@ -130,7 +130,7 @@ class DatabasePatcher {
 
         // Set Default Assistant as the default for default API service
         let personaFetchRequest = NSFetchRequest<PersonaEntity>(entityName: "PersonaEntity")
-        personaFetchRequest.predicate = NSPredicate(format: "name == %@", "Default Assistant")
+        personaFetchRequest.predicate = NSPredicate(format: "name == %@", "Gork")
 
         do {
             let defaultPersonas = try context.fetch(personaFetchRequest)

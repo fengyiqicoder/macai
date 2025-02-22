@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  macai
+
+  Created by Edmund Feng on 2025/2/22.
+  
+*/
+"CFBundleName" = "Gork";
+"CFBundleDisplayName" = "Gork";

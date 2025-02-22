@@ -186,18 +186,18 @@ struct TabGeneralSettingsView: View {
                 }
             }
 
-            HStack {
-                Toggle("Automatically check for updates", isOn: $autoCheckForUpdates)
-                    .onChange(of: autoCheckForUpdates) { newValue in
-                        updaterController.updater.automaticallyChecksForUpdates = newValue
-                    }
-
-                Spacer()
-
-                Button("Check for Updates Now") {
-                    updaterController.checkForUpdates(nil)
-                }
-            }
+//            HStack {
+//                Toggle("Automatically check for updates", isOn: $autoCheckForUpdates)
+//                    .onChange(of: autoCheckForUpdates) { newValue in
+//                        updaterController.updater.automaticallyChecksForUpdates = newValue
+//                    }
+//
+//                Spacer()
+//
+//                Button("Check for Updates Now") {
+//                    updaterController.checkForUpdates(nil)
+//                }
+//            }
 
         }
         .padding()

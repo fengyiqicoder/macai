@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "OpenAI_Logo_12.svg",
+      "filename" : "xai_12.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "OpenAI_Logo_24.svg",
+      "filename" : "xai_24.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "OpenAI_Logo_36.svg",
+      "filename" : "xai_36.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

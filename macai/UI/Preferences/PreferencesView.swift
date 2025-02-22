@@ -30,25 +30,25 @@ struct PreferencesView: View {
                     Label("General", systemImage: "gearshape")
                 }
 
-            TabAPIServicesView()
-                .tabItem {
-                    Label("API Services", systemImage: "network")
-                }
+//            TabAPIServicesView()
+//                .tabItem {
+//                    Label("API Services", systemImage: "network")
+//                }
 
             TabAIPersonasView()
                 .tabItem {
                     Label("AI Assistants", systemImage: "person.2")
                 }
 
-            BackupRestoreView(store: store)
-                .tabItem {
-                    Label("Backup & Restore", systemImage: "externaldrive")
-                }
+//            BackupRestoreView(store: store)
+//                .tabItem {
+//                    Label("Backup & Restore", systemImage: "externaldrive")
+//                }
 
-            DangerZoneView(store: store)
-                .tabItem {
-                    Label("Danger Zone", systemImage: "flame.fill")
-                }
+//            DangerZoneView(store: store)
+//                .tabItem {
+//                    Label("Danger Zone", systemImage: "flame.fill")
+//                }
         }
         .frame(width: 480)
         .padding()

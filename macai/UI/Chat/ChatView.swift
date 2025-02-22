@@ -60,13 +60,13 @@ struct ChatView: View {
             ScrollView {
                 ScrollViewReader { scrollView in
                     VStack {
-                        SystemMessageBubbleView(
-                            message: chat.systemMessage,
-                            color: chat.persona?.color,
-                            newMessage: $newMessage,
-                            editSystemMessage: $editSystemMessage
-                        )
-                        .id("system_message")
+//                        SystemMessageBubbleView(
+//                            message: chat.systemMessage,
+//                            color: chat.persona?.color,
+//                            newMessage: $newMessage,
+//                            editSystemMessage: $editSystemMessage
+//                        )
+//                        .id("system_message")
 
                         if chat.messages.count > 0 {
                             ForEach(chatViewModel.sortedMessages, id: \.self) { messageEntity in
@@ -257,7 +257,7 @@ struct ChatView: View {
         }
         .background(backgroundColor)
         .navigationTitle(
-            chat.name != "" ? chat.name : chat.persona?.name ?? "macai LLM chat"
+            chat.name != "" ? chat.name : chat.persona?.name ?? "Gork LLM chat"
         )
         .onAppear(perform: {
             self.lastOpenedChatId = chat.id.uuidString

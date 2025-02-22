@@ -26,24 +26,12 @@ struct WelcomeScreen: View {
 
                 VStack {
                     WelcomeIcon()
+                        .frame(width: 60, height: 60)
                         .padding(64)
 
                     VStack {
-                        Text("Welcome to macai!").font(.title)
-                        if !apiServiceIsPresent {
-                            Text("To get started, please add at least one API Service in the settings")
-                            if #available(macOS 14.0, *) {
-                                SettingsLink {
-                                    Text("Open Settings")
-                                }
-                            }
-                            else {
-                                Button("Open Settings") {
-                                    openPreferencesView()
-                                }
-                            }
-                        }
-                        else {
+                        Text("Welcome to Gork!").font(.title)
+    
                             if chatsCount == 0 {
                                 Text("No chats were created yet. Create new one?")
                                 Button("Create new chat") {
@@ -53,8 +41,6 @@ struct WelcomeScreen: View {
                             else {
                                 Text("Select chat to get started, or create new one")
                             }
-
-                        }
                     }
                     .padding(.bottom, 60)
                 }
@@ -74,7 +60,7 @@ struct WelcomeIcon: View {
                 state = value.translation
             }
 
-        Image("WelcomeIcon")
+        Image("logo_xai")
             .resizable()
             .scaledToFit()
             .frame(maxWidth: 256, maxHeight: 256)

@@ -51,7 +51,7 @@ struct ContentView: View {
             HSplitView {
                 if selectedChat != nil {
                     ChatView(viewContext: viewContext, chat: selectedChat!)
-                        .frame(minWidth: 400)
+                        .frame(minWidth: 300)
                         .id(openedChatId)
                 }
                 else {
@@ -94,41 +94,41 @@ struct ContentView: View {
         .navigationTitle("Chats")
         .toolbar {
             ToolbarItemGroup(placement: .primaryAction) {
-                Image("logo_\(selectedChat?.apiService?.type ?? "")")
+                Image("logo_xai")
                     .resizable()
                     .renderingMode(.template)
                     .interpolation(.high)
                     .frame(width: 16, height: 16)
 
-                if let selectedChat = selectedChat {
-                    Menu {
-                        ForEach(apiServices, id: \.objectID) { apiService in
-                            Button(action: {
-                                selectedChat.apiService = apiService
-                                handleServiceChange(selectedChat, apiService)
-                            }) {
-                                HStack {
-                                    Text(apiService.name ?? "Unnamed API Service")
-                                    if selectedChat.apiService == apiService {
-                                        Image(systemName: "checkmark")
-                                    }
-                                }
-                            }
-                        }
-
-                        Divider()
-
-                        Text("Current Model: \(selectedChat.gptModel)")
-                            .foregroundColor(.secondary)
-                    } label: {
-                        Text(selectedChat.apiService?.name ?? "Select API Service")
-                    }
-                }
+//                if let selectedChat = selectedChat {
+//                    Menu {
+//                        ForEach(apiServices, id: \.objectID) { apiService in
+//                            Button(action: {
+//                                selectedChat.apiService = apiService
+//                                handleServiceChange(selectedChat, apiService)
+//                            }) {
+//                                HStack {
+//                                    Text(apiService.name ?? "Unnamed API Service")
+//                                    if selectedChat.apiService == apiService {
+//                                        Image(systemName: "checkmark")
+//                                    }
+//                                }
+//                            }
+//                        }
+//
+//                        Divider()
+//
+//                        Text("Current Model: \(selectedChat.gptModel)")
+//                            .foregroundColor(.secondary)
+//                    } label: {
+//                        Text(selectedChat.apiService?.name ?? "Select API Service")
+//                    }
+//                }
 
                 Button(action: {
                     newChat()
                 }) {
-                    Image(systemName: "square.and.pencil")
+                    Image(systemName: "plus.app.fill")
                 }
 
                 if #available(macOS 14.0, *) {
